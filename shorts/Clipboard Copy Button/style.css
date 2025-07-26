@@ -1,0 +1,59 @@
+body {
+  background: #f0f0f0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.copy-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#copiedMsg {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  background: #4caf50;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+#copiedMsg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
