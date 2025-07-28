@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.editor-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100vh;
+  background-color: aqua;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #777;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 1px 5px #00000070;
+  z-index: 3;
+}
+nav div {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  gap: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+}
+li {
+  list-style: none;
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+li:first-child {
+  border-radius: 10px 0 0 0;
+}
+li.active {
+  background: #fff;
+  color: #000;
+}
+li:hover {
+  background: #ccc;
+  color: #000;
+}
+.editor {
+  width: 100%;
+  height: 50%;
+  overflow: auto;
+}
+.CodeMirror {
+  padding: 5px;
+  height: calc(100% - 10px);
+  border-radius: 0 0 10px 10px;
+  font-size: 15px;
+}
+.preview {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+}
+#preview-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+}

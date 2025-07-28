@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My text editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css" />
+  </head>
+  <body>
+    <div class="editor-container">
+      <nav>
+        <ul>
+          <li class="active">HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <div>
+          <svg height="24" viewBox="0 0 24 24" width="24" fill="#FF0000">
+            <path
+              d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.204 3.5 12 3.5 12 3.5s-7.204 0-9.391.569A2.994 2.994 0 0 0 .502 6.186C0 8.373 0 12 0 12s0 3.627.502 5.814a2.994 2.994 0 0 0 2.107 2.117C4.796 20.5 12 20.5 12 20.5s7.204 0 9.391-.569a2.994 2.994 0 0 0 2.107-2.117C24 15.627 24 12 24 12s0-3.627-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+            />
+          </svg>
+          @roshidulshorker
+        </div>
+      </nav>
+      <div class="editor">
+        <textarea id="editor-html" class="textarea">
+<!-- Your HTML here -->
+    </textarea
+        >
+        <textarea id="editor-css" class="textarea">
+/* Your CSS here */
+    </textarea
+        >
+        <textarea id="editor-js" class="textarea">
+// Your JavaScript here
+    </textarea
+        >
+      </div>
+      <div class="preview">
+        <iframe id="preview-frame"></iframe>
+      </div>
+    </div>
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="codemirror/mode/css/css.js"></script>
+    <script src="codemirror/mode/javascript/javascript.js"></script>
+    <script src="codemirror/addon/edit/closebrackets.js"></script>
+    <script src="codemirror/addon/edit/closetag.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
