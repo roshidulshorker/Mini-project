@@ -1,3 +1,6 @@
+// Typing speed (in milliseconds per character)
+let typingSpeed = prompt("Enter typing speed"); // Change this value manually as needed
+
 // Get elements
 const tabs = document.querySelectorAll("nav ul li");
 const textareas = {
@@ -50,17 +53,29 @@ tabs.forEach((tab, index) => {
       const cm = editors[key];
       const wrapper = cm.getWrapperElement();
       wrapper.style.display = i === index ? "block" : "none";
-      cm.refresh(); // Fix layout issue
+      cm.refresh();
     });
   });
 });
 
-// Typing effect paste function
-function simulateTyping(cm, text, speed = 20) {
+// Simulated typing effect
+function simulateTyping(cm, text, speed = typingSpeed) {
   let i = 0;
   function typeChar() {
     if (i < text.length) {
-      cm.replaceRange(text[i], cm.getCursor());
+      const doc = cm.getDoc();
+      const cursor = doc.getCursor();
+      doc.replaceRange(text[i], cursor);
+
+      // 🔽 Check if scroll bar is visible and scroll if needed
+      const scroller = cm.getScrollerElement();
+      const isScrollable = scroller.scrollHeight > scroller.clientHeight;
+
+      if (isScrollable) {
+        // Scroll to bottom to keep typed text visible
+        scroller.scrollTop = scroller.scrollHeight;
+      }
+
       i++;
       setTimeout(typeChar, speed);
     }
@@ -74,7 +89,7 @@ Object.values(editors).forEach((cm) => {
     if (changeObj.origin === "paste") {
       const pastedText = (changeObj.text || []).join("\n");
       changeObj.cancel(); // cancel default paste
-      simulateTyping(instance, pastedText, 40); // speed in ms per letter
+      simulateTyping(instance, pastedText, typingSpeed); // use current typing speed
     }
   });
 });
