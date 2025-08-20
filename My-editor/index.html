@@ -24,23 +24,26 @@
           @roshidulshorker
         </div>
       </nav>
-      <div class="editor">
-        <textarea id="editor-html" class="textarea">
+      <section id="editor-section">
+        <div class="editor">
+          <textarea id="editor-html" class="textarea">
 <!-- Your HTML here -->
     </textarea
-        >
-        <textarea id="editor-css" class="textarea">
+          >
+          <textarea id="editor-css" class="textarea">
 /* Your CSS here */
     </textarea
-        >
-        <textarea id="editor-js" class="textarea">
+          >
+          <textarea id="editor-js" class="textarea">
 // Your JavaScript here
     </textarea
-        >
-      </div>
-      <div class="preview">
-        <iframe id="preview-frame"></iframe>
-      </div>
+          >
+        </div>
+        <div class="preview">
+          <iframe id="preview-frame"></iframe>
+          <button id="toggle-preview"><span>↕</span></button>
+        </div>
+      </section>
     </div>
     <script src="codemirror/lib/codemirror.js"></script>
     <script src="codemirror/mode/xml/xml.js"></script>

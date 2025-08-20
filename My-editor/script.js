@@ -118,3 +118,10 @@ Object.values(editors).forEach((cm) => {
 
 // Initial preview
 updatePreview();
+
+//expand preview when click expand button
+const togglePrevBtn = document.getElementById("toggle-preview");
+togglePrevBtn.addEventListener("click", () => {
+  const preview = document.querySelector(".preview");
+  preview.classList.toggle("expanded");
+});
