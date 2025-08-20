@@ -15,7 +15,7 @@ body {
   height: 100vh;
   background: linear-gradient(to bottom, #ff0000, #0000ff);
 }
-nav {
+#nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,8 +23,9 @@ nav {
   border-radius: 10px 10px 0 0;
   box-shadow: 0 1px 5px #00000070;
   z-index: 3;
+  height: 38px;
 }
-nav div {
+#nav div {
   display: flex;
   align-items: center;
   margin-right: 10px;
@@ -54,7 +55,7 @@ li:hover {
   color: #000;
 }
 section#editor-section {
-  height: 100%;
+  height: calc(100% - 38px);
   position: relative;
 }
 .editor {
@@ -78,7 +79,7 @@ section#editor-section {
   background-color: #fff;
   border-radius: 10px;
   padding: 5px;
-  position: absolute;
+  position: relative;
   z-index: 10;
 }
 #preview-frame {
@@ -91,12 +92,12 @@ section#editor-section {
 #toggle-preview {
   width: 20px;
   height: 20px;
-  position: absolute;
   bottom: 5px;
   right: 5px;
   border-bottom-right-radius: 7px;
   border: 1px solid #777;
   cursor: pointer;
+  position: absolute;
 }
 #toggle-preview span {
   display: inline-block;
