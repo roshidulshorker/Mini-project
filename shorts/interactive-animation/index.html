@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Animation Showcase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Interactive Animations</h1>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Hover Magic</h3>
+          <p>
+            Move your cursor over this card to see the 3D transformation and
+            shimmer effect. The card tilts and lifts with a beautiful glass
+            morphism design.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Glass Effect</h3>
+          <p>
+            This card features a stunning backdrop blur effect with animated
+            gradient borders. The transparency creates depth and modern
+            aesthetics.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Smooth Transitions</h3>
+          <p>
+            Every interaction is carefully crafted with smooth CSS transitions.
+            Notice how elements respond naturally to your interactions.
+          </p>
+        </div>
+      </div>
+
+      <div class="floating-elements">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+        <div class="floating-circle circle-4"></div>
+        <div class="floating-circle circle-5"></div>
+      </div>
+
+      <div class="button-container">
+        <button class="interactive-btn" onclick="createRipple(this)">
+          Click Me!
+        </button>
+        <button class="interactive-btn" onclick="createRipple(this)">
+          Animate
+        </button>
+        <button class="interactive-btn" onclick="createRipple(this)">
+          Transform
+        </button>
+      </div>
+
+      <div class="morphing-shape" onclick="speedUpMorph(this)"></div>
+
+      <div class="pulse-ring" onclick="triggerPulse(this)"></div>
+
+      <div class="text-animation" onclick="animateText(this)">
+        <span>C</span><span>l</span><span>i</span><span>c</span><span>k</span>
+        <span> </span>
+        <span>t</span><span>h</span><span>i</span><span>s</span>
+        <span> </span>
+        <span>t</span><span>e</span><span>x</span><span>t</span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
